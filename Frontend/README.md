@@ -20,3 +20,7 @@ An intelligent web-based platform designed to monitor traffic conditions, detect
 2. Install dependencies: `npm install` in both Frontend and Backend folders.
 3. Setup `.env` file with MongoDB URI.
 4. Run `npm run dev` in Backend and `npm run dev` in Frontend.
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)

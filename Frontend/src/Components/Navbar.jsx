@@ -1,59 +1,40 @@
-import React ,{useContext} from 'react';
-import {Link,useNavigate} from 'react-router-dom';
-import {AuthContext} from '../contexts/AuthContext';
-const Navbar=()=>{
-    const {user,logout}=useContext(AuthContext);
-const navigate=useNavigate();
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const handleLogout=()=>{
-    logout();
-    navigate('/login');
-};
-return(
-    <nav className="bg-blue-500 text-white px-6 py-3 flex justify-between items-center shadow-md">
-    {/*Logo and Brand Name*/}
-        <div className="flex items-center space-x-3">
-            <img src="Images/Flowsense.png" alt="logo" className="h-12 w-12 rounded-full"/>
-            <span className="font-semibold text-lg tracking-wide">
-                FlowSense
-            </span>
-        </div>
-        {/*Right section Links +user info */}
-        <div className="flex items-center space-x-5">
-            {user &&(
-                <>
-                <Link to="/"className="hover:underline">Dashboard</Link>
-                <Link to ="/live" className="hover:underline">Live Feed</Link>
-                <Link to ="/alerts" className="hover:underline">Alerts</Link>
-                </>
-            )}
+const Navbar = () => {
+    return (
+        <nav className="fixed top-0 left-0 bg-blue-500 text-white px-6 py-4 flex justify-between items-center shadow-md z-50 w-full">
+            
+            {/* --- LEFT: LOGO & BRAND --- */}
+            <Link to="/" className="flex items-center space-x-3 hover:opacity-90 transition">
+                <img 
+                    src="/Images/Flowsense.png" 
+                    alt="FlowSense Logo" 
+                    className="h-10 w-10 rounded-full bg-white p-0.5" 
+                />
+                <span className="font-bold text-xl tracking-wide">
+                    FlowSense
+                </span>
+            </Link>
 
-            {user? (
-                <button
-                onClick={handleLogout}
-                className="bg-white text-primary px-3 py-1 rounded-lg hover:bg-gray-200 trabsition">
-                    Logout
-                </button>
-
-            ):(
+            {/* --- RIGHT: AUTH BUTTONS --- */}
+            <div className="flex items-center space-x-4">
                 <Link
-                to="/login"
-                className="bg-white text-primary px-3 py-1 rounded-lg hover:bg-gray-200 transition">
+                    to="/login"
+                    className="bg-white text-blue-600 rounded-2xl hover:text-gray-100 font-medium px-4 py-2 transition duration-200"
+                >
                     Login
                 </Link>
 
-            )
-        }
-        {!user && (
-  <Link
-    to="/signup"
-    className="bg-white text-primary px-3 py-1 rounded-lg hover:bg-gray-200 transition"
-  >
-    Sign Up
-  </Link>
-)}
-        </div>
-    </nav> 
-)
-}
+                <Link
+                    to="/signup"
+                    className="bg-white text-blue-600 font-bold px-6 py-2 rounded-2xl hover:bg-gray-100 hover:shadow-lg transition duration-200"
+                >
+                    Sign Up
+                </Link>
+            </div>
+        </nav> 
+    );
+};
+
 export default Navbar;

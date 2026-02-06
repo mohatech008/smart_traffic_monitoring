@@ -1,51 +1,67 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
+import { AuthProvider } from './contexts/AuthContext.jsx';
+import Footer from './Components/Footer.jsx'; 
+
+// Components
 import Navbar from './Components/Navbar.jsx';
-import {BrowserRouter,Routes,Route} from 'react-router-dom';
-import {AuthProvider} from './contexts/AuthContext.jsx';
+import ProtectedRoute from './Components/ProtectedRoute.jsx';
+
+// Pages
+import Home from './Pages/Home.jsx'; 
 import Login from './Pages/Login.jsx';
 import Signup from './Pages/Signup.jsx';
 import Dashboard from './Pages/Dashboard.jsx';
-import ProtectedRoute from './Components/ProtectedRoute.jsx';
-import Livefeed from './Pages/Livefeed.jsx';
-import Alerts from './Pages/Alerts.jsx';
- function App() {
 
-   return (
+// --- LAYOUTS ---
+// 1. Layout for Public Pages (Shows Navbar)
+const PublicLayout = () => {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <div className="flex-grow">
+      <Outlet />
+      </div>
+       <Footer />
+    </div>
+  );
+};
+
+// 2. Layout for Private Pages (Hides Navbar, Full Screen)
+const PrivateLayout = () => {
+  return (
+    <div className="h-screen w-full">
+      <Outlet /> {/* This represents the Dashboard */}
+    </div>
+  );
+};
+
+function App() {
+  return (
     <AuthProvider>
       <BrowserRouter>
-        <Navbar />
-      <Routes>
-      <Route path="/login" element={<Login/>}/>
-      <Route path="/signup" element={<Signup/>}/>
-      <Route 
-  path="/dashboard" 
-  element={
-    <ProtectedRoute>
-      <Dashboard />
-      </ProtectedRoute>
-      
-  } 
-/>
-<Route
-path="/livefeed"
-element={
-  <ProtectedRoute>
- <Livefeed/>
- </ProtectedRoute>
-}
-/>
-<Route
-path="/alerts"
-element={
-  <ProtectedRoute>
-    <Alerts/>
-    </ProtectedRoute>
-}
-/>
-      </Routes>
-      </BrowserRouter>
-      </AuthProvider>
-);
- }
-export default App;
+        <Routes>
+          
+          {/* --- PUBLIC ROUTES GROUP (Has Navbar) --- */}
+          <Route element={<PublicLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+          </Route>
 
+          {/* --- PRIVATE ROUTES GROUP (No Navbar, Protected) --- */}
+          <Route element={
+            <ProtectedRoute>
+              <PrivateLayout />
+            </ProtectedRoute>
+          }>
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Route>
+
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
+  );
+}
+
+export default App;

@@ -15,7 +15,7 @@ const Signup = () => {
 
   const [errors, setErrors] = useState({});
   const [success, setSuccess] = useState("");
-  const [loading, setLoading] = useState(false); // Added loading state
+  const [loading, setLoading] = useState(false); 
 
   const validate = () => {
     let newErrors = {};
@@ -44,15 +44,15 @@ const Signup = () => {
     e.preventDefault();
     if (!validate()) return;
     
-    setLoading(true); // Disable button while processing
-    setErrors({});    // Clear previous errors
+    setLoading(true);
+    setErrors({});    
 
     try {
       // call register from AuthContext
       await register(formData);
       
       setSuccess("Account created successfully! Redirecting...");
-      setFormData({ name: "", email: "", password: "" }); // Clear form
+      setFormData({ name: "", email: "", password: "" }); 
       
       setTimeout(() => navigate("/login"), 1500);
     } catch (err) {

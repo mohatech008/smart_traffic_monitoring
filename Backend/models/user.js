@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true, // Make sure name is required
+    required: true, 
   },
   email: { 
     type: String, 
@@ -16,8 +16,12 @@ const UserSchema = new mongoose.Schema({
     },
   role: { 
     type: String, 
+    enum:["user","admin","officer"],
     default: "user" 
   },
+  //Field for reset password token and expiry
+  resetPasswordToken: String,
+  resetPasswordExpires: Date,
 });
 
 module.exports = mongoose.model("User", UserSchema);

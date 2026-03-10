@@ -28,8 +28,6 @@ const TrafficMap = ({ incidents }) => {
         />
 
         {incidents.map((incident) => {
-          // Find coordinate based on location name string
-          // If name doesn't match exactly, fallback to slightly randomized CBD location
           const coords = locationsMap[Object.keys(locationsMap).find(k => incident.location.includes(k))] 
                          || { lat: -1.2921 + (Math.random() * 0.02), lng: 36.8219 + (Math.random() * 0.02) };
 

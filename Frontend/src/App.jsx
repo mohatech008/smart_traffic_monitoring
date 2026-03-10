@@ -1,20 +1,17 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
-import { AuthProvider } from './contexts/AuthContext.jsx';
+import { AuthProvider } from './Contexts/AuthContext.jsx';
 import Footer from './Components/Footer.jsx'; 
-
-// Components
+import { ToastProvider } from './Contexts/ToastContext.jsx';
 import Navbar from './Components/Navbar.jsx';
 import ProtectedRoute from './Components/ProtectedRoute.jsx';
-
-// Pages
 import Home from './Pages/Home.jsx'; 
 import Login from './Pages/Login.jsx';
 import Signup from './Pages/Signup.jsx';
 import Dashboard from './Pages/Dashboard.jsx';
-
-// --- LAYOUTS ---
-// 1. Layout for Public Pages (Shows Navbar)
+import ForgotPassword from './Pages/ForgotPassword.jsx';
+import ResetPassword from './Pages/ResetPassword.jsx';
+{/*LAYOUTS*/}
 const PublicLayout = () => {
   return (
     <div className="flex flex-col min-h-screen">
@@ -27,11 +24,10 @@ const PublicLayout = () => {
   );
 };
 
-// 2. Layout for Private Pages (Hides Navbar, Full Screen)
 const PrivateLayout = () => {
   return (
     <div className="h-screen w-full">
-      <Outlet /> {/* This represents the Dashboard */}
+      <Outlet />
     </div>
   );
 };
@@ -39,27 +35,31 @@ const PrivateLayout = () => {
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
-        <Routes>
-          
-          {/* --- PUBLIC ROUTES GROUP (Has Navbar) --- */}
-          <Route element={<PublicLayout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-          </Route>
+      <ToastProvider> 
+        <BrowserRouter>
+          <Routes>
+            
+            {/*PUBLIC ROUTES GROUP*/}
+            <Route element={<PublicLayout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/reset-password/:token" element={<ResetPassword />} />
+            </Route>
 
-          {/* --- PRIVATE ROUTES GROUP (No Navbar, Protected) --- */}
-          <Route element={
-            <ProtectedRoute>
-              <PrivateLayout />
-            </ProtectedRoute>
-          }>
-            <Route path="/dashboard" element={<Dashboard />} />
-          </Route>
+            {/*PRIVATE ROUTES GROUP */}
+            <Route element={
+              <ProtectedRoute>
+                <PrivateLayout />
+              </ProtectedRoute>
+            }>
+              <Route path="/dashboard" element={<Dashboard />} />
+            </Route>
 
-        </Routes>
-      </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
+      </ToastProvider>
     </AuthProvider>
   );
 }

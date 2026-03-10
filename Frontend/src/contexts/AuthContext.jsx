@@ -6,7 +6,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // 1. Check if user is logged in when the app loads
+  {/*1. Check if user is logged in when the app loads*/}
   useEffect(() => {
     const savedToken = localStorage.getItem("token");
     const savedUser = localStorage.getItem("user");
@@ -20,9 +20,6 @@ export const AuthProvider = ({ children }) => {
     }
     setLoading(false);
   }, []);
-
-  // 2. LOGIN Function
-  // We use fetch instead of 'api' to ensure we hit port 5000 directly
   const login = async (formData) => {
     try {
       const response = await fetch("http://localhost:5000/api/auth/login", {
@@ -39,7 +36,6 @@ export const AuthProvider = ({ children }) => {
         throw new Error(data.message || "Login failed");
       }
 
-      // Save the Token and the User Object sent from backend
       localStorage.setItem("token", data.token);
       localStorage.setItem("user", JSON.stringify(data.user));
 
@@ -50,7 +46,7 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  // 3. REGISTER Function
+  {/*3. REGISTER Function*/}
   const register = async (formData) => {
     try {
       const response = await fetch("http://localhost:5000/api/auth/register", {
@@ -67,23 +63,44 @@ export const AuthProvider = ({ children }) => {
         throw new Error(data.message || "Registration failed");
       }
 
-      return data; // Success
+      return data;
     } catch (err) {
       throw err;
     }
   };
 
-  // 4. LOGOUT Function
+  {/*4. LOGOUT Function*/}
   const logout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
-    setUser(null);
-    // Optional: Redirect to login page manually if needed
+    setUser(null)
     window.location.href = "/login"; 
+  };
+  {/*5. UPDATE PROFILE Function*/}
+  const updateProfile = async (userData) => {
+    try {
+      const payload = { ...userData, id: user.id };
+
+      const response = await fetch("http://localhost:5000/api/auth/update", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) throw new Error(data.error || "Update failed");
+      localStorage.setItem("user", JSON.stringify(data));
+      setUser(data);
+      
+      return { success: true };
+    } catch (error) {
+      return { success: false, message: error.message };
+    }
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, register, loading }}>
+    <AuthContext.Provider value={{ user, login, logout, register,updateProfile, loading }}>
       {!loading && children}
     </AuthContext.Provider>
   );

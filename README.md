@@ -26,8 +26,8 @@ An intelligent, full-stack web platform designed to monitor traffic conditions, 
 
 ## 📦 How to Run Locally
 
-### 1. Backend Setup
 ```bash
+### 1.Backend Setup
 cd Backend
 npm install
 npm run dev

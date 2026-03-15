@@ -27,7 +27,7 @@ An intelligent, full-stack web platform designed to monitor traffic conditions, 
 ## 📦 How to Run Locally
 
 ### 1. Backend Setup
-
+```bash
 cd Backend
 npm install
 npm run dev
@@ -38,7 +38,7 @@ cd Frontend
 npm install
 npm run dev
 
-### 3.AI Engine Setup
+###AI Engine Setup
 
 cd AI_Engine
 pip install ultralytics opencv-python requests

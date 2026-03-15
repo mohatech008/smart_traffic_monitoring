@@ -7,7 +7,7 @@ const Home = () => {
     <div className="w-full bg-white scroll-smooth">
       
       {/* --- SECTION 1: HERO (Video Background) --- */}
-      {/* min-h-[calc(100vh-80px)] ensures it fills the screen below the fixed navbar */}
+    
       <section id="home" className="relative min-h-[calc(100vh-80px)] w-full overflow-hidden flex flex-col justify-center shadow-xl">
         
         {/* Video & Overlay */}
@@ -127,12 +127,11 @@ const Home = () => {
               ))}
             </ul>
           </div>
-
           {/* Laptop Mockup Image */}
           <div className="lg:w-1/2 relative">
              <div className="relative rounded-xl  border-[8px] border-gray-900 bg-gray-900 overflow-hidden transform  transition duration-500">
                 {/* Ensure you have this image in public folder */}
-                <img src="/dashboard_preview.png" alt="Dashboard Preview" className="w-full h-auto object-cover" />
+                <img src="/Dashboard-preview.png" alt="Dashboard Preview" className="w-full h-auto object-cover" />
              </div>
              {/* Decorative blob behind */}
              <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-blue-100 rounded-full blur-3xl opacity-60"></div>

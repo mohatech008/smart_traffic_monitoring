@@ -101,7 +101,7 @@ const UserModal = ({ isOpen, onClose, usersList, fetchUsers, handleDeleteUser })
                 <button onClick={() => setIsAddingUser(true)} className="bg-blue-600 text-white px-4 py-2 rounded-lg text-xs font-bold flex items-center gap-2 hover:bg-blue-700 transition-all shadow-md shadow-blue-500/20">
                   <FaPlus /> Add New User
                 </button>
-              </div>
+              </div> 
               
               <div className="overflow-hidden border border-gray-100 dark:border-gray-700 rounded-xl">
                 <div className="overflow-y-auto max-h-[400px]">

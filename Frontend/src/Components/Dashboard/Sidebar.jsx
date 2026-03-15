@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaTachometerAlt, FaBell, FaCar, FaCogs, FaUserCircle, FaSignOutAlt, FaEdit, FaShieldAlt, FaTimes } from "react-icons/fa";
 
 const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, activeTab, setActiveTab, user, logout, isAdmin, onProfileClick }) => {
@@ -14,27 +15,35 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, activeTab, setActiveTab, use
 
   return (
     <aside className={`fixed md:static inset-y-0 left-0 z-50 w-64 bg-gray-800 dark:bg-gray-900 text-white flex flex-col transition-transform duration-300 ease-in-out ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 shadow-xl`}>
-      <div className="text-2xl font-bold p-6 border-b border-gray-700 flex justify-between items-center">
-        <span>FlowSense</span>
+      
+      {/* --- HEADER: LOGO & LINK TO HOME --- */}
+      <div className="p-6 border-b border-gray-700 flex justify-between items-center">
+        <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition cursor-pointer">
+           <img 
+              src="/Images/Flowsense.png" 
+              alt="Logo" 
+              className="w-8 h-8 rounded-full bg-white p-0.5 shadow-sm"
+           />
+           <span className="text-2xl font-bold tracking-wide">FlowSense</span>
+        </Link>
         <button onClick={() => setIsSidebarOpen(false)} className="md:hidden text-gray-400 hover:text-white"><FaTimes /></button>
       </div>
 
       <nav className="flex-1 px-4 mt-4">
         <ul className="space-y-2">
           {menuItems.map((item) => (
-
-<li 
-  key={item.id} 
-  onClick={() => { setActiveTab(item.id); setIsSidebarOpen(false); }} 
-  className={`group py-3 flex items-center gap-3 rounded-lg px-4 cursor-pointer transition-all duration-200 ${
-    activeTab === item.id 
-      ? 'bg-blue-600/10 text-blue-400 border-l-4 border-blue-500 rounded-l-none' 
-      : 'hover:bg-gray-700/50 text-gray-400 hover:text-white'
-  }`}
->
-  <item.icon className={`${activeTab === item.id ? 'text-blue-400' : 'group-hover:text-white'}`} /> 
-  <span className="font-medium text-sm">{item.label}</span>
-</li>
+            <li 
+              key={item.id} 
+              onClick={() => { setActiveTab(item.id); setIsSidebarOpen(false); }} 
+              className={`group py-3 flex items-center gap-3 rounded-lg px-4 cursor-pointer transition-all duration-200 ${
+                activeTab === item.id 
+                  ? 'bg-blue-600/10 text-blue-400 border-l-4 border-blue-500 rounded-l-none' 
+                  : 'hover:bg-gray-700/50 text-gray-400 hover:text-white'
+              }`}
+            >
+              <item.icon className={`${activeTab === item.id ? 'text-blue-400' : 'group-hover:text-white'}`} /> 
+              <span className="font-medium text-sm">{item.label}</span>
+            </li>
           ))}
         </ul>
       </nav>

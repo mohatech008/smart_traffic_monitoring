@@ -16,7 +16,6 @@ if not os.path.exists(VIDEO_PATH) and type(VIDEO_PATH) == str:
 
 API_URL = "http://localhost:5000/api/incidents/report"
 
-# INCREASED THIS SO IT DOESN'T SPAM AUTOMATICALLY
 CONGESTION_THRESHOLD = 50  
 ALERT_COOLDOWN = 15 
 

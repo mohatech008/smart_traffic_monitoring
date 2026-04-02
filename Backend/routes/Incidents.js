@@ -68,37 +68,30 @@ router.post("/report", async (req, res) => {
   try {
     const newIncident = new Incident(req.body);
     const savedIncident = await newIncident.save();
-    
-    // Trigger Real-time Dashboard Update
     const io = req.app.get("io");
     if (io) io.emit("newIncident", savedIncident);
-
-    // --- 2. SEND SMS ALERT (AfricasTalking) ---
-    // Only send if severity is HIGH or CRITICAL
-    if (req.body.severity === "high" || req.body.severity === "critical") {
-        
-        const messageBody = `🚨 FlowSense ALERT: ${req.body.type.toUpperCase()} at ${req.body.location}.\nSeverity: ${req.body.severity.toUpperCase()}.\nPlease dispatch units immediately.`;
+    if (req.body.severity === "high" || req.body.severity === "critical") {     
+        const messageBody = `FlowSense ALERT: ${req.body.type.toUpperCase()} at ${req.body.location}.\nSeverity: 
+        ${req.body.severity.toUpperCase()}.\nPlease dispatch units immediately.`;
         
         const options = {
             to: [process.env.MY_PHONE_NUMBER],
-            message: messageBody,
-            
+            message: messageBody,            
         };
-
         sms.send(options)
             .then(response => {
-                console.log("✅ SMS Sent via AfricasTalking:", response);
+                console.log("SMS Sent via AfricasTalking:", response);
             })
             .catch(error => {
-                console.error("❌ SMS Failed:", error);
+                console.error("SMS Failed:", error);
             });
     }
-
     res.status(201).json(savedIncident);
   } catch (err) {
     res.status(400).json({ message: err.message });
   }
-});
+}); 
+ 
 
 // 4. Delete Single Incident (Admin Only)
 router.delete("/:id", adminOnly, async (req, res) => {

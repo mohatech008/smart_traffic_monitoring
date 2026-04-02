@@ -76,10 +76,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
         <p>&copy; {new Date().getFullYear()} FlowSense Project. All rights reserved.</p>
         
-        <p className="flex items-center gap-1">
-          Developed with <FaHeart className="text-red-500 animate-pulse" /> by 
-          <span className="text-gray-300 font-medium">Mohamed Abdi Ahmed</span>
-        </p>
+       
       </div>
     </footer>
   );

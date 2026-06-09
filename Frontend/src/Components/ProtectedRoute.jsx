@@ -3,13 +3,11 @@ import {Navigate} from 'react-router-dom';
 import {AuthContext} from '../Contexts/AuthContext';
 
 const ProtectedRoute=({children})=>{
-    const {user}=useContext(AuthContext);
-     {/*if user is not logged in,redirect to login page*/}
+    const {user}=useContext(AuthContext)
      if (!user){
         return <Navigate to="/login" replace />;
 
      }
-     {/*If logged in, allow access*/}
      return children;
 };
 

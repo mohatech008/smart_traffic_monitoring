@@ -1,16 +1,12 @@
 const router = require("express").Router();
 const Incident = require("../models/Incident");
 const jwt = require("jsonwebtoken");
-
-// --- 1. SETUP AFRICASTALKING ---
 const credentials = {
     apiKey: process.env.AT_API_KEY,
-    username: process.env.AT_USERNAME // Should be 'sandbox'
+    username: process.env.AT_USERNAME
 };
 const AfricasTalking = require('africastalking')(credentials);
 const sms = AfricasTalking.SMS;
-
-// --- AUTH MIDDLEWARE ---
 const adminOnly = (req, res, next) => {
   const token = req.header("Authorization")?.replace("Bearer ", "");
   if (!token) return res.status(401).json({ message: "No token, authorization denied" });
@@ -25,9 +21,6 @@ const adminOnly = (req, res, next) => {
   }
 };
 
-// --- ROUTES ---
-
-// 1. Calculate vehicle count per hour (Last 24h)
 router.get("/flow", async (req, res) => {
   try {
     const last24Hours = new Date(Date.now() - 24 * 60 * 60 * 1000);
@@ -53,7 +46,6 @@ router.get("/flow", async (req, res) => {
   }
 });
 
-// 2. Get All Incidents
 router.get("/", async (req, res) => {
   try {
     const incidents = await Incident.find().sort({ timestamp: -1 });
@@ -63,21 +55,18 @@ router.get("/", async (req, res) => {
   }
 });
 
-// 3. Report an Incident (UPDATED WITH SMS)
 router.post("/report", async (req, res) => {
   try {
     const newIncident = new Incident(req.body);
     const savedIncident = await newIncident.save();
     
-    // Trigger Real-time Dashboard Update
     const io = req.app.get("io");
     if (io) io.emit("newIncident", savedIncident);
 
-    // --- 2. SEND SMS ALERT (AfricasTalking) ---
-    // Only send if severity is HIGH or CRITICAL
+  
     if (req.body.severity === "high" || req.body.severity === "critical") {
         
-        const messageBody = `🚨 FlowSense ALERT: ${req.body.type.toUpperCase()} at ${req.body.location}.\nSeverity: ${req.body.severity.toUpperCase()}.\nPlease dispatch units immediately.`;
+        const messageBody = `FlowSense ALERT: ${req.body.type.toUpperCase()} at ${req.body.location}.\nSeverity: ${req.body.severity.toUpperCase()}.\nPlease dispatch units immediately.`;
         
         const options = {
             to: [process.env.MY_PHONE_NUMBER],
@@ -87,10 +76,10 @@ router.post("/report", async (req, res) => {
 
         sms.send(options)
             .then(response => {
-                console.log("✅ SMS Sent via AfricasTalking:", response);
+                console.log("SMS Sent via AfricasTalking:", response);
             })
             .catch(error => {
-                console.error("❌ SMS Failed:", error);
+                console.error("SMS Failed:", error);
             });
     }
 
@@ -99,8 +88,6 @@ router.post("/report", async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 });
-
-// 4. Delete Single Incident (Admin Only)
 router.delete("/:id", adminOnly, async (req, res) => {
   try {
     const deleted = await Incident.findByIdAndDelete(req.params.id);
@@ -110,8 +97,6 @@ router.delete("/:id", adminOnly, async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 });
-
-// 5. Clear Database (Admin Only)
 router.delete("/", adminOnly, async (req, res) => {
   try {
     await Incident.deleteMany({});

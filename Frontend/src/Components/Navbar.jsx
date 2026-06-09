@@ -72,8 +72,6 @@ const Navbar = () => {
                         <a href="#home" onClick={closeMenu} className="hover:text-gray-200 transition">Home</a>
                         <a href="#features" onClick={closeMenu} className="hover:text-gray-200 transition">Features</a>
                         <a href="#tech" onClick={closeMenu} className="hover:text-gray-200 transition">Technology</a>
-                        
-                        {/* Mobile Auth Links (Moved here from the top bar) */}
                         <Link to="/login" onClick={closeMenu} className="text-blue-100 hover:text-white pb-2">
                             Login
                         </Link>

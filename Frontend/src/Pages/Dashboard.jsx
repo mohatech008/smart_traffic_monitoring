@@ -59,18 +59,12 @@ const Dashboard = () => {
     });
     setChartData(Object.keys(roadCounts).map((road) => ({ road, congestion: roadCounts[road] * 10 })));
   };
-
-  // --- HELPER: CALCULATE REAL-TIME STATS (THE MISSING CONST) ---
   const calculateStats = (data) => {
     const active = data.length;
     const congestedCount = data.filter(i => i.type === "congestion").length;
-
-    // Logic: Base vehicles + 15 per incident (Simulation of traffic density)
     const vehicles = 1250 + (data.length * 15);
-
-    // Logic: Speed drops as congestion rises
     let speed = 60 - (congestedCount * 5);
-    if (speed < 5) speed = 5; // Minimum speed limit
+    if (speed < 5) speed = 5; 
 
     setStats({
       activeAlerts: active,
@@ -105,7 +99,7 @@ const Dashboard = () => {
       const updated = incidents.filter(i => i._id !== id);
       setIncidents(updated);
       processChartData(updated);
-      calculateStats(updated); // Update stats after delete
+      calculateStats(updated);
       alert("Incident deleted successfully.");
     } catch (e) { 
       alert("Error: Failed to delete incident."); 
@@ -126,7 +120,7 @@ const Dashboard = () => {
 
       setIncidents([]); 
       processChartData([]); 
-      calculateStats([]); // Reset stats
+      calculateStats([]); 
       alert("Database Cleared Successfully.");
     } catch (e) { 
       alert("Error: Failed to clear database."); 
@@ -177,7 +171,6 @@ const Dashboard = () => {
     } catch (e) { console.error(e); }
   };
 
-  // --- EFFECT: DATA & SOCKET ---
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -186,9 +179,9 @@ const Dashboard = () => {
         const data = await res.json();
         setIncidents(data); 
         processChartData(data);
-        calculateStats(data); // Calculate initial stats
+        calculateStats(data);
 
-        // 2. Fetch Traffic Flow (If endpoint exists)
+      
         try {
             const flowRes = await fetch("http://localhost:5000/api/incidents/flow");
             if(flowRes.ok) {
@@ -196,7 +189,7 @@ const Dashboard = () => {
                 setFlowData(flowDataJson);
             }
         } catch(err) {
-            // Silently fail if flow endpoint not ready, charts handle defaults
+            
             console.log("Flow data not available yet");
         }
 

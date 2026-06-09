@@ -5,8 +5,6 @@ import { FaBrain, FaBell, FaMapMarkedAlt, FaArrowRight, FaCheckCircle, FaLaptopC
 const Home = () => {
   return (
     <div className="w-full bg-white scroll-smooth">
-      
-      {/* --- SECTION 1: HERO (Video Background) --- */}
     
       <section id="home" className="relative min-h-[calc(100vh-80px)] w-full overflow-hidden flex flex-col justify-center shadow-xl">
         
@@ -53,8 +51,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* --- SECTION 2: FEATURES (Why FlowSense?) --- */}
       <section id="features" className="py-24 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Intelligence at Every Intersection</h2>
@@ -127,10 +123,8 @@ const Home = () => {
               ))}
             </ul>
           </div>
-          {/* Laptop Mockup Image */}
           <div className="lg:w-1/2 relative">
              <div className="relative rounded-xl  border-[8px] border-gray-900 bg-gray-900 overflow-hidden transform  transition duration-500">
-                {/* Ensure you have this image in public folder */}
                 <img src="/Dashboard-preview.png" alt="Dashboard Preview" className="w-full h-auto object-cover" />
              </div>
              {/* Decorative blob behind */}
@@ -146,7 +140,6 @@ const Home = () => {
           <h2 className="text-2xl md:text-3xl font-bold mb-12">Built with Modern Architecture</h2>
           
           <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-80">
-            {/* Tech Stack List */}
             {[
               { name: "MongoDB Atlas", color: "text-green-500" },
               { name: "Express.js", color: "text-gray-300" },

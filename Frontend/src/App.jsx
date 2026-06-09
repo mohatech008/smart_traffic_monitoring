@@ -11,7 +11,6 @@ import Signup from './Pages/Signup.jsx';
 import Dashboard from './Pages/Dashboard.jsx';
 import ForgotPassword from './Pages/ForgotPassword.jsx';
 import ResetPassword from './Pages/ResetPassword.jsx';
-{/*LAYOUTS*/}
 const PublicLayout = () => {
   return (
     <div className="flex flex-col min-h-screen">

@@ -42,10 +42,9 @@ const ForgotPassword = () => {
   return (
     <div className="flex min-h-screen bg-white font-sans">
       
-      {/* --- LEFT SIDE: Image Section (Matches Login Page) --- */}
       <div className="hidden lg:block lg:w-1/2 relative">
         <img
-          src="Images/traffic-login.png" // Reusing your login image
+          src="Images/traffic-login.png"
           alt="FlowSense Traffic Monitoring"
           className="absolute inset-0 w-full h-full object-cover"
         />

@@ -116,7 +116,6 @@ const Login = () => {
 
             {/* Password Field */}
             <div> 
-              {/* --- FORGOT PASSWORD LINK ADDED HERE --- */}
               <div className="flex justify-between items-center mb-2 px-1">
                 <label className="block text-xs font-black text-gray-500 uppercase tracking-[0.15em]">
                   Password

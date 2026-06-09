@@ -44,7 +44,7 @@ const Signup = () => {
 
     try {
       await register(formData);
-      setSuccess("Account created successfully! Redirecting...");
+      setSuccess("Account created successfully!");
       setFormData({ name: "", email: "", password: "" }); 
       setTimeout(() => navigate("/login"), 1500);
     } catch (err) {

@@ -7,11 +7,10 @@ import random
 
 # --- CONFIGURATION ---
 script_dir = os.path.dirname(os.path.abspath(__file__))
-# Change this to 1 if you are using DroidCam via USB
 VIDEO_PATH = os.path.join(script_dir, "traffic_video.mp4") 
 
 if not os.path.exists(VIDEO_PATH) and type(VIDEO_PATH) == str:
-    print(f"⚠️ Video file not found at {VIDEO_PATH}. Defaulting to Webcam.")
+    print(f" Video file not found at {VIDEO_PATH}. Defaulting to Webcam.")
     VIDEO_PATH = 0 
 
 API_URL = "http://localhost:5000/api/incidents/report"
@@ -76,7 +75,7 @@ while cap.isOpened():
         boxes = r.boxes
         for box in boxes:
             cls = int(box.cls[0])
-            if cls in [2, 5, 7]: # Car, Bus, Truck
+            if cls in [2, 5, 7]:
                 vehicle_count += 1
                 x1, y1, x2, y2 = map(int, box.xyxy[0])
                 cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)

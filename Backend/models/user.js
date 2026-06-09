@@ -19,7 +19,6 @@ const UserSchema = new mongoose.Schema({
     enum:["user","admin","officer"],
     default: "user" 
   },
-  //Field for reset password token and expiry
   resetPasswordToken: String,
   resetPasswordExpires: Date,
 });

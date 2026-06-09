@@ -142,10 +142,12 @@ const nodemailer = require("nodemailer");
 
 // --- SETUP EMAIL TRANSPORTER ---
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false, 
   auth: {
-    user: "mohamadeyaminka29@gmail.com", // REPLACE WITH YOUR GMAIL
-    pass: "hjjknrhghnyyyfni", // REPLACE WITH GOOGLE APP PASSWORD
+    user: "mohamadeyaminka29@gmail.com", 
+    pass: "hjjknrhghnyyyfni", 
   },
 });
 
@@ -166,11 +168,7 @@ router.post("/forgot-password", async (req, res) => {
     user.resetPasswordToken = resetToken;
     user.resetPasswordExpires = Date.now() + 3600000; 
     await user.save();
-
-    // Create Link
-    // NOTE: Change localhost:5173 to your actual frontend URL if deployed
     const resetUrl = `http://localhost:5173/reset-password/${resetToken}`;
-
     // Send Email
     const mailOptions = {
       to: user.email,

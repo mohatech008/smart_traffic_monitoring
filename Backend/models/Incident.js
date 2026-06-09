@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const IncidentSchema = new mongoose.Schema({
   type: {
     type: String,
-    enum: ["accident", "congestion", "roadblock", "clear"], // The types of events we track
+    enum: ["accident", "congestion", "roadblock", "clear"], 
     required: true,
   },
   location: {

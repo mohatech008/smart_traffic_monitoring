@@ -1,0 +1,714 @@
+[{
+  "_id": {
+    "$oid": "6a2fe6127515877c5cc89b57"
+  },
+  "type": "congestion",
+  "location": "Mombasa Road (Near Airport)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:46:26.677Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe6217515877c5cc89b59"
+  },
+  "type": "congestion",
+  "location": "Thika Superhighway (Survey)",
+  "severity": "high",
+  "description": "AI Detected high density: 18 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:46:41.959Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe6317515877c5cc89b5b"
+  },
+  "type": "congestion",
+  "location": "Waiyaki Way (Westlands)",
+  "severity": "high",
+  "description": "AI Detected high density: 17 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:46:57.215Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe6407515877c5cc89b62"
+  },
+  "type": "congestion",
+  "location": "Ngong Road (Junction)",
+  "severity": "high",
+  "description": "AI Detected high density: 18 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:47:12.355Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe64f7515877c5cc89b64"
+  },
+  "type": "congestion",
+  "location": "Waiyaki Way (Westlands)",
+  "severity": "high",
+  "description": "AI Detected high density: 22 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:47:27.378Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe65e7515877c5cc89b66"
+  },
+  "type": "congestion",
+  "location": "Langata Road (T-Mall)",
+  "severity": "high",
+  "description": "AI Detected high density: 21 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:47:42.475Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe66d7515877c5cc89b68"
+  },
+  "type": "congestion",
+  "location": "Mombasa Road (Near Airport)",
+  "severity": "high",
+  "description": "AI Detected high density: 18 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:47:57.483Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe67c7515877c5cc89b6a"
+  },
+  "type": "congestion",
+  "location": "Mombasa Road (Near Airport)",
+  "severity": "high",
+  "description": "AI Detected high density: 19 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:48:12.730Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe68b7515877c5cc89b6c"
+  },
+  "type": "congestion",
+  "location": "Thika Superhighway (Survey)",
+  "severity": "high",
+  "description": "AI Detected high density: 17 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:48:27.816Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe69a7515877c5cc89b6e"
+  },
+  "type": "congestion",
+  "location": "Waiyaki Way (Westlands)",
+  "severity": "high",
+  "description": "AI Detected high density: 17 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:48:42.884Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe6a97515877c5cc89b70"
+  },
+  "type": "congestion",
+  "location": "Ngong Road (Junction)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:48:57.934Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe6b87515877c5cc89b72"
+  },
+  "type": "congestion",
+  "location": "Waiyaki Way (Westlands)",
+  "severity": "high",
+  "description": "AI Detected high density: 17 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:49:12.992Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe6c87515877c5cc89b74"
+  },
+  "type": "congestion",
+  "location": "Thika Superhighway (Survey)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:49:28.129Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe6d77515877c5cc89b76"
+  },
+  "type": "congestion",
+  "location": "Mombasa Road (Near Airport)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:49:43.299Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe6e67515877c5cc89b78"
+  },
+  "type": "congestion",
+  "location": "Waiyaki Way (Westlands)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:49:58.517Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe6fb7515877c5cc89b7a"
+  },
+  "type": "congestion",
+  "location": "Ngong Road (Junction)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:50:19.372Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe74a7515877c5cc89b7c"
+  },
+  "type": "congestion",
+  "location": "Mombasa Road (Near Airport)",
+  "severity": "high",
+  "description": "AI Detected high density: 17 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:51:38.903Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe7927515877c5cc89b7e"
+  },
+  "type": "congestion",
+  "location": "Thika Superhighway (Survey)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:52:50.821Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe7a27515877c5cc89b80"
+  },
+  "type": "congestion",
+  "location": "Thika Superhighway (Survey)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:53:06.911Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe7b27515877c5cc89b84"
+  },
+  "type": "congestion",
+  "location": "Langata Road (T-Mall)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:53:22.316Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe7cc7515877c5cc89b86"
+  },
+  "type": "congestion",
+  "location": "Thika Superhighway (Survey)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:53:48.268Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe7dd7515877c5cc89b88"
+  },
+  "type": "congestion",
+  "location": "Mombasa Road (Near Airport)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:54:05.253Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe8ce7515877c5cc89b8a"
+  },
+  "type": "congestion",
+  "location": "Thika Superhighway (Survey)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:58:06.692Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe8dd7515877c5cc89b8c"
+  },
+  "type": "congestion",
+  "location": "Waiyaki Way (Westlands)",
+  "severity": "high",
+  "description": "AI Detected high density: 17 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:58:21.823Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe8ed7515877c5cc89b8e"
+  },
+  "type": "congestion",
+  "location": "Waiyaki Way (Westlands)",
+  "severity": "high",
+  "description": "AI Detected high density: 17 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:58:37.023Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe8fc7515877c5cc89b90"
+  },
+  "type": "congestion",
+  "location": "Thika Superhighway (Survey)",
+  "severity": "high",
+  "description": "AI Detected high density: 17 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:58:52.132Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe90b7515877c5cc89b92"
+  },
+  "type": "congestion",
+  "location": "Langata Road (T-Mall)",
+  "severity": "high",
+  "description": "AI Detected high density: 18 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:59:07.169Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe91a7515877c5cc89b94"
+  },
+  "type": "congestion",
+  "location": "Langata Road (T-Mall)",
+  "severity": "high",
+  "description": "AI Detected high density: 23 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:59:22.432Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe9297515877c5cc89b96"
+  },
+  "type": "congestion",
+  "location": "Mombasa Road (Near Airport)",
+  "severity": "high",
+  "description": "AI Detected high density: 22 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:59:37.519Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe9387515877c5cc89b98"
+  },
+  "type": "congestion",
+  "location": "Langata Road (T-Mall)",
+  "severity": "high",
+  "description": "AI Detected high density: 25 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T11:59:52.590Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe9477515877c5cc89b9a"
+  },
+  "type": "congestion",
+  "location": "Waiyaki Way (Westlands)",
+  "severity": "high",
+  "description": "AI Detected high density: 18 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T12:00:07.678Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe9567515877c5cc89b9c"
+  },
+  "type": "congestion",
+  "location": "Ngong Road (Junction)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T12:00:22.738Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe9657515877c5cc89b9e"
+  },
+  "type": "congestion",
+  "location": "Ngong Road (Junction)",
+  "severity": "high",
+  "description": "AI Detected high density: 17 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T12:00:37.774Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe9747515877c5cc89ba0"
+  },
+  "type": "congestion",
+  "location": "Ngong Road (Junction)",
+  "severity": "high",
+  "description": "AI Detected high density: 17 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T12:00:52.783Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe9837515877c5cc89ba2"
+  },
+  "type": "congestion",
+  "location": "Langata Road (T-Mall)",
+  "severity": "high",
+  "description": "AI Detected high density: 17 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T12:01:07.905Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe9927515877c5cc89ba4"
+  },
+  "type": "congestion",
+  "location": "Ngong Road (Junction)",
+  "severity": "high",
+  "description": "AI Detected high density: 19 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T12:01:22.959Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe9a27515877c5cc89ba6"
+  },
+  "type": "congestion",
+  "location": "Waiyaki Way (Westlands)",
+  "severity": "high",
+  "description": "AI Detected high density: 19 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T12:01:38.019Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe9b17515877c5cc89ba8"
+  },
+  "type": "congestion",
+  "location": "Ngong Road (Junction)",
+  "severity": "high",
+  "description": "AI Detected high density: 18 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T12:01:53.060Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe9c47515877c5cc89baa"
+  },
+  "type": "congestion",
+  "location": "Mombasa Road (Near Airport)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T12:02:12.513Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe9d37515877c5cc89bac"
+  },
+  "type": "congestion",
+  "location": "Mombasa Road (Near Airport)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T12:02:27.597Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe9e27515877c5cc89bae"
+  },
+  "type": "congestion",
+  "location": "Langata Road (T-Mall)",
+  "severity": "high",
+  "description": "AI Detected high density: 17 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T12:02:42.721Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fe9fa7515877c5cc89bb0"
+  },
+  "type": "congestion",
+  "location": "Langata Road (T-Mall)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T12:03:06.358Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2fea5b7515877c5cc89bb2"
+  },
+  "type": "congestion",
+  "location": "Ngong Road (Junction)",
+  "severity": "high",
+  "description": "AI Detected high density: 17 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T12:04:43.292Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2feaa07515877c5cc89bb4"
+  },
+  "type": "congestion",
+  "location": "Thika Superhighway (Survey)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-15T12:05:52.745Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a3119017515877c5cc89bc4"
+  },
+  "type": "congestion",
+  "location": "Langata Road (T-Mall)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-16T09:36:01.177Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a3119187515877c5cc89bc6"
+  },
+  "type": "congestion",
+  "location": "Mombasa Road (Near Airport)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-16T09:36:24.357Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a3119277515877c5cc89bc8"
+  },
+  "type": "congestion",
+  "location": "Langata Road (T-Mall)",
+  "severity": "high",
+  "description": "AI Detected high density: 17 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-16T09:36:39.758Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a3119367515877c5cc89bca"
+  },
+  "type": "congestion",
+  "location": "Waiyaki Way (Westlands)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-16T09:36:54.935Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a3119467515877c5cc89bcc"
+  },
+  "type": "congestion",
+  "location": "Mombasa Road (Near Airport)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-16T09:37:10.660Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a3119577515877c5cc89bce"
+  },
+  "type": "congestion",
+  "location": "Mombasa Road (Near Airport)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-16T09:37:27.642Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a3119677515877c5cc89bd0"
+  },
+  "type": "congestion",
+  "location": "Langata Road (T-Mall)",
+  "severity": "high",
+  "description": "AI Detected high density: 16 vehicles.",
+  "status": "detected",
+  "timestamp": {
+    "$date": "2026-06-16T09:37:43.827Z"
+  },
+  "__v": 0
+}]

@@ -8,7 +8,7 @@ import random
 # --- CONFIGURATION ---
 script_dir = os.path.dirname(os.path.abspath(__file__))
 VIDEO_PATH = os.path.join(script_dir, "traffic_video.mp4") 
-BACKEND_BASE_URL = "https://smart-traffic-monitoring-yfar.onrender.com" 
+BACKEND_BASE_URL = "http://localhost:5000" 
 
 API_URL = f"{BACKEND_BASE_URL}/api/incidents/report"
 

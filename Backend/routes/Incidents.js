@@ -1,12 +1,14 @@
 const router = require("express").Router();
 const Incident = require("../models/Incident");
 const jwt = require("jsonwebtoken");
+//Africa's Talking SMS Setup
 const credentials = {
     apiKey: process.env.AT_API_KEY,
     username: process.env.AT_USERNAME
 };
 const AfricasTalking = require('africastalking')(credentials);
 const sms = AfricasTalking.SMS;
+//Admin midleware
 const adminOnly = (req, res, next) => {
   const token = req.header("Authorization")?.replace("Bearer ", "");
   if (!token) return res.status(401).json({ message: "No token, authorization denied" });
@@ -14,13 +16,14 @@ const adminOnly = (req, res, next) => {
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = decoded;
+
     if (req.user.role !== "admin") return res.status(403).json({ message: "Access denied. Admins only." });
     next();
   } catch (err) {
     res.status(401).json({ message: "Token is not valid" });
   }
 };
-
+//Traffic flow analysis endpoint
 router.get("/flow", async (req, res) => {
   try {
     const last24Hours = new Date(Date.now() - 24 * 60 * 60 * 1000);

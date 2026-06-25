@@ -1,0 +1,100 @@
+[{
+  "_id": {
+    "$oid": "6970fd11ec8515a5fd5eb4ca"
+  },
+  "name": "Mohamed Hussein",
+  "email": "mohamadeyaminka29@gmail.com",
+  "password": "$2b$10$pxV3Ehmh0EL55P9Unz7CeO88bbdQ7VQkNM/c4suUeGAlv/SWQxXiq",
+  "role": "admin",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698dd2da1e67d8a4639442f5"
+  },
+  "name": "Fahad Daiso Bare",
+  "email": "fahaddiisow@gmail.com",
+  "password": "$2b$10$1DuyZfC6YbqFHoRhp0Pdcu5e/MX5FI5WxxgEBUT7/OTctePLAYRVq",
+  "role": "admin",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698e3456cc0d31a50d1fc78d"
+  },
+  "name": "Mohamed Abdi Ahmed ",
+  "email": "mohamedahmedabdi008@gmail.com",
+  "password": "$2b$10$cmZiuihpKVLCEPuDdWZjm.LqaXOWQPFq4gVFqqZH.qquxwRBuAjKS",
+  "role": "admin",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6990cc5daca329696c53b610"
+  },
+  "name": "Abdinasir Musa ",
+  "email": "abdinasirmusa123@gmail.com",
+  "password": "$2b$10$P.uu80WMBJJBio8peYxCse.J79ACmrAODJQ1N7qg/sfK8ZoBfWPHa",
+  "role": "officer",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "699aea04dba4c5e66ae4b32c"
+  },
+  "name": "Hamida Hussein",
+  "email": "hamidahussein@gmail.com",
+  "password": "$2b$10$uqwSxIODm3ozl1P47uWagOw126ujoNfNlJjAxwAor1AGNd53lhHXK",
+  "role": "officer",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "699aeac9dba4c5e66ae4b33b"
+  },
+  "name": "Abdinasir Omar",
+  "email": "abdinasiromar@gmail.com",
+  "password": "$2b$10$Io7To3VMAEdD.2jQBDIWhOKrfcURKrAYFLOrj.JymGfcJqcllUPES",
+  "role": "officer",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b6b577a130edc4d4d1cf02"
+  },
+  "name": "Juma Allan",
+  "email": "Juma123@gmail.com",
+  "password": "$2b$10$uX6iT3dGz8/8g0RGK3BwruHGkoBBzrF3PdqyeHlZ7ZEKVoxCa2GfG",
+  "role": "admin",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b6befca130edc4d4d1cf4e"
+  },
+  "name": "Juma Abdi",
+  "email": "jumaabdi123@gmail.com",
+  "password": "$2b$10$Cumf8TqwElvmPwlH3ooi9.1QtROaeDsc0.7x/bdvFdTloJmIcqjMS",
+  "role": "admin",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2ee4f972d7a0e48494e242"
+  },
+  "name": "Sajda Hussein",
+  "email": "sajda123@gmail.com",
+  "password": "$2b$10$t9CmruXrNtOHX5Ai6cq09./hEKBazf2o2e3MiTpV7HUFp71dOV6V6",
+  "role": "officer",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a2ee57172d7a0e48494e24d"
+  },
+  "name": "Abdiqani Hussein",
+  "email": "abdiqani123@gmail.com",
+  "password": "$2b$10$nOOxlAfAvYbaNOlHsk/SQegVAbY8Ln8Cdsa6KJCY2om4F0ePBDI2i",
+  "role": "officer",
+  "__v": 0
+}]
